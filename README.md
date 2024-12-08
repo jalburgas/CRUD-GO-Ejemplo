@@ -1,4 +1,4 @@
-Practica de Crud en lenguaje de Programacion GOLAND
+Practica de Crud en lenguaje de Programación GOLAND
 ******************************************************************
 Go : Es un lenguaje de programación que permite correr un servicio web sin intalar ninguna otra herramienta y lo mejor es que se compila como un archivo del sistema operatino(Nativo)
 *******************************************************************
