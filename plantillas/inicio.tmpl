@@ -1,0 +1,31 @@
+{{ define "inicio" }}
+{{ template "cabecera" }}
+
+<h2 class="text-center">Tabla de Datos</h2>
+
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Correo</th>
+        <th>Acciones</th>
+    </tr>
+    </thead>
+    <tbody>
+    {{ range . }}
+    <tr>
+        <td>{{ .Id }}</td>
+        <td>{{ .Nombre }}</td>
+        <td>{{ .Correo }}</td>
+        <td>
+            <a class="btn btn-success" href="/editar?id={{ .Id }}" role="button">Editar</a>
+            <a class="btn btn-danger" href="/borrar?id={{ .Id }}" role="button">Borrar</a>
+        </td>
+    </tr>
+    {{ end }}
+    </tbody>
+</table>
+
+{{ template "pie" }}
+{{ end }}

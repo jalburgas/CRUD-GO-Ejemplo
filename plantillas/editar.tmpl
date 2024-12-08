@@ -1,0 +1,24 @@
+{{ define "editar" }}
+{{ template "cabecera" }}
+
+<div class="container mt-5">
+    <h2 class="text-center">Editar Empleado</h2>
+    <form method="post" action="/actualizar"> 
+        <div class="form-group">
+            <label for="id">ID</label>
+            <input type="text" class="form-control" id="id" name="id" value="{{ .Id }}" readonly>
+        </div>
+        <div class="form-group">
+            <label for="nombre">Nombre</label>
+            <input type="text" class="form-control" id="nombre" name="nombre" value="{{ .Nombre }}" required>
+        </div>
+        <div class="form-group">
+            <label for="correo">Correo</label>
+            <input type="email" class="form-control" id="correo" name="correo" value="{{ .Correo }}" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Actualizar</button>
+    </form>
+</div>
+
+{{ template "pie" }}
+{{ end }}
